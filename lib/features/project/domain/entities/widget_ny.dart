@@ -1,20 +1,22 @@
 import 'package:equatable/equatable.dart';
+import 'package:solly_labs/features/widget/domain/entities/parent_child_connection_type_ny.dart';
+import 'package:solly_labs/features/widget/domain/entities/widget_type_ny.dart';
 
 class WidgetNy extends Equatable {
   final String id;
   final DateTime createdAt;
-  final String widgetType;
+  final WidgetTypeNy widgetType;
   final String? parentId;
   final String widgetContent;
-  final String artBoardId;
-  final String widgetName;
-  final String createdBy;
+  final String? artBoardId;
+  final String? widgetName;
+  final String? createdBy;
   final DateTime lastModifiedAt;
-  final String lastModifiedBy;
-  final String projectId;
+  final String? lastModifiedBy;
+  final String? projectId;
   final bool showWidgetOptions;
   final bool showChildWidget;
-  final String parentChildConnectionType;
+  final ParentChildConnectionTypeNy? parentChildConnectionType;
   final String levels;
   final int updateCount;
   final int? levelDepth;
@@ -26,15 +28,15 @@ class WidgetNy extends Equatable {
     required this.widgetType,
     this.parentId,
     required this.widgetContent,
-    required this.artBoardId,
-    required this.widgetName,
-    required this.createdBy,
+    this.artBoardId,
+    this.widgetName,
+    this.createdBy,
     required this.lastModifiedAt,
-    required this.lastModifiedBy,
-    required this.projectId,
+    this.lastModifiedBy,
+    this.projectId,
     required this.showWidgetOptions,
     required this.showChildWidget,
-    required this.parentChildConnectionType,
+    this.parentChildConnectionType,
     required this.levels,
     required this.updateCount,
     this.levelDepth,
